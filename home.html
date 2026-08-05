@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bazvor — Shop Everything</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<div class="bazvor-app">
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-top">
+
+        <div class="brand-area">
+
+            <div class="brand-logo">
+                <img src="logo.png" alt="Bazvor">
+            </div>
+
+            <div class="brand-name">
+                BAZVOR
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button class="header-icon-button"
+                    id="headerWishlist"
+                    type="button">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+            <button class="header-icon-button"
+                    id="headerNotification"
+                    type="button">
+
+                <i class="fa-regular fa-bell"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="header-search-wrap">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products, brands and more..."
+                autocomplete="off"
+            >
+
+            <button
+                class="camera-button"
+                id="cameraButton"
+                type="button"
+                aria-label="Visual Search">
+
+                <i class="fa-solid fa-camera"></i>
+
+            </button>
+
+        </div>
+
+        <div class="search-results" id="searchResults"></div>
+
+    </div>
+
+
+    <!-- TOP CATEGORY -->
+
+    <nav class="top-category-nav">
+
+        <div class="top-category-scroll" id="topCategoryScroll">
+
+            <button class="top-category active"
+                    data-category="All"
+                    type="button">All</button>
+
+            <button class="top-category"
+                    data-category="Men"
+                    type="button">Men</button>
+
+            <button class="top-category"
+                    data-category="Women"
+                    type="button">Women</button>
+
+            <button class="top-category"
+                    data-category="Phones"
+                    type="button">Phones</button>
+
+            <button class="top-category"
+                    data-category="Watches"
+                    type="button">Watches</button>
+
+            <button class="top-category"
+                    data-category="Groceries"
+                    type="button">Groceries</button>
+
+            <button class="top-category"
+                    data-category="Beauty"
+                    type="button">Beauty</button>
+
+            <button class="top-category"
+                    data-category="Home"
+                    type="button">Home</button>
+
+            <button class="top-category"
+                    data-category="Sports"
+                    type="button">Sports</button>
+
+            <button class="top-category"
+                    data-category="Agriculture"
+                    type="button">Agriculture</button>
+
+            <button class="top-category"
+                    data-category="Automotive"
+                    type="button">Automotive</button>
+
+            <button class="top-category"
+                    data-category="Kids"
+                    type="button">Kids</button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="main-content">
+
+
+<!-- =====================================================
+     BANNER
+===================================================== -->
+
+<section class="promo-section">
+
+    <div class="promo-slider" id="promoSlider">
+
+        <article
+            class="promo-slide active"
+            data-target-type="category"
+            data-target-value="Electronics">
+
+            <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85"
+                alt="Bazvor banner">
+
+        </article>
+
+
+        <article
+            class="promo-slide"
+            data-target-type="category"
+            data-target-value="Fashion">
+
+            <img
+                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1600&q=85"
+                alt="Bazvor banner">
+
+        </article>
+
+
+        <article
+            class="promo-slide"
+            data-target-type="category"
+            data-target-value="Home">
+
+            <img
+                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1600&q=85"
+                alt="Bazvor banner">
+
+        </article>
+
+    </div>
+
+    <div class="banner-dots" id="bannerDots"></div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPLORE CATEGORIES
+===================================================== -->
+
+<section class="content-section category-section">
+
+    <div class="section-header">
+
+        <h2>Explore Categories</h2>
+
+    </div>
+
+
+    <div class="explore-category-scroll"
+         id="exploreCategoryScroll">
+
+
+        <button class="explore-category"
+                data-category="Electronics"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </span>
+
+            <span>Electronics</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Fashion"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-shirt"></i>
+            </span>
+
+            <span>Fashion</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Beauty"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </span>
+
+            <span>Beauty</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Home"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span>Home</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Sports"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-dumbbell"></i>
+            </span>
+
+            <span>Sports</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Agriculture"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </span>
+
+            <span>Agriculture</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Automotive"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-car"></i>
+            </span>
+
+            <span>Automotive</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Groceries"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </span>
+
+            <span>Groceries</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Kids"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-child"></i>
+            </span>
+
+            <span>Kids</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Phones"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+            </span>
+
+            <span>Phones</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Watches"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-regular fa-clock"></i>
+            </span>
+
+            <span>Watches</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Men"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-person"></i>
+            </span>
+
+            <span>Men</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Women"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-person-dress"></i>
+            </span>
+
+            <span>Women</span>
+
+        </button>
+
+
+        <button class="explore-category"
+                data-category="Books"
+                type="button">
+
+            <span class="explore-icon">
+                <i class="fa-solid fa-book"></i>
+            </span>
+
+            <span>Books</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FLASH SELL
+===================================================== -->
+
+<section class="flash-sale-section">
+
+
+    <div class="flash-header">
+
+
+        <div class="flash-title">
+
+            <h2>
+                Flash Sell
+            </h2>
+
+        </div>
+
+
+        <div class="flash-header-right">
+
+
+            <div class="flash-countdown">
+
+                <div class="flash-time-box">
+
+                    <span id="flashHours">08</span>
+
+                    <small>H</small>
+
+                </div>
+
+
+                <b>:</b>
+
+
+                <div class="flash-time-box">
+
+                    <span id="flashMinutes">00</span>
+
+                    <small>M</small>
+
+                </div>
+
+
+                <b>:</b>
+
+
+                <div class="flash-time-box">
+
+                    <span id="flashSeconds">00</span>
+
+                    <small>S</small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="flash-see-all"
+                id="flashSeeAll"
+                type="button">
+
+                See All
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="flash-product-scroll"
+        id="flashProducts">
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     BENEFITS
+===================================================== -->
+
+<section class="benefits-row">
+
+
+    <div class="benefit-item">
+
+        <span class="benefit-icon">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+        </span>
+
+        <span>
+
+            <b>Free Delivery</b>
+
+            <small>On orders over ৳1500</small>
+
+        </span>
+
+    </div>
+
+
+    <div class="benefit-item">
+
+        <span class="benefit-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </span>
+
+        <span>
+
+            <b>Secure Payment</b>
+
+            <small>100% secure checkout</small>
+
+        </span>
+
+    </div>
+
+
+    <div class="benefit-item">
+
+        <span class="benefit-icon">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+        </span>
+
+        <span>
+
+            <b>Easy Returns</b>
+
+            <small>7 days return policy</small>
+
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     RECOMMENDED
+===================================================== -->
+
+<section class="content-section all-products-section">
+
+    <div class="section-header">
+
+        <h2>Recommended For You</h2>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="productGrid">
+    </div>
+
+
+    <button
+        class="load-more-button"
+        id="loadMoreProducts"
+        type="button">
+
+        Load More Products
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     BOTTOM NAVIGATION
+===================================================== -->
+
+<nav class="bottom-navigation">
+
+
+    <a href="home.html"
+       class="bottom-nav-item active"
+       data-page="home.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Home</span>
+
+    </a>
+
+
+    <a href="categories.html"
+       class="bottom-nav-item"
+       data-page="categories.html">
+
+        <i class="fa-solid fa-table-cells-large"></i>
+
+        <span>Categories</span>
+
+    </a>
+
+
+    <a href="message.html"
+       class="bottom-nav-item"
+       data-page="message.html">
+
+        <i class="fa-regular fa-message"></i>
+
+        <span>Message</span>
+
+    </a>
+
+
+    <a href="cart.html"
+       class="bottom-nav-item"
+       data-page="cart.html">
+
+        <span class="bottom-cart-icon">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <b class="cart-badge"
+               id="cartBadge">0</b>
+
+        </span>
+
+        <span>Cart</span>
+
+    </a>
+
+
+    <a href="account.html"
+       class="bottom-nav-item"
+       data-page="account.html">
+
+        <i class="fa-regular fa-user"></i>
+
+        <span>Account</span>
+
+    </a>
+
+
+</nav>
+
+
+</div>
+
+
+<script
+    type="module"
+    src="home.js">
+</script>
+
+</body>
+</html>

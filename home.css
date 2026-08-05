@@ -1,0 +1,1860 @@
+/* =========================================================
+   BAZVOR HOME — PREMIUM MOBILE DESIGN
+========================================================= */
+
+:root {
+    --pink: #e5006d;
+    --pink-dark: #c9005f;
+    --pink-light: #fff0f7;
+    --pink-soft: #fff7fb;
+
+    --text: #181818;
+    --muted: #777;
+    --border: #eeeeee;
+
+    --blue: #0878c9;
+
+    --radius: 14px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f7f8;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+.bazvor-app {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+
+.main-content {
+    width: 100%;
+    padding-bottom: 82px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: #fff7fb;
+
+    box-shadow:
+        0 2px 12px rgba(229, 0, 109, .07);
+}
+
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 62px;
+
+    padding: 0 15px;
+}
+
+
+.brand-area {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   BAZVOR LOGO
+   TIGHT TRANSPARENT PNG
+========================================================= */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+
+.brand-logo img,
+.logo img {
+    display: block;
+
+    width: 90px;
+    height: 90px;
+
+    max-width: 100px;
+    max-height: 100px;
+
+    object-fit: contain;
+
+    margin: 0;
+    padding: 0;
+
+    flex-shrink: 0;
+
+    background: transparent;
+}
+
+
+.brand-name {
+    color: #111;
+
+    font-size: 23px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -.6px;
+}
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+.header-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: var(--pink);
+
+    font-size: 17px;
+
+    border: 1px solid rgba(229, 0, 109, .06);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.04);
+}
+
+
+.header-icon-button:active {
+    transform: scale(.94);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.header-search-wrap {
+    position: relative;
+
+    width: 100%;
+
+    padding: 3px 14px 8px;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 44px;
+
+    padding: 0 5px 0 12px;
+
+    background: #fff;
+
+    border: 1.5px solid var(--pink);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 3px 10px rgba(229, 0, 109, .08);
+}
+
+
+.search-icon {
+    flex-shrink: 0;
+
+    margin-right: 8px;
+
+    color: #858585;
+
+    font-size: 16px;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #222;
+
+    font-size: 12px;
+}
+
+
+.search-box input::placeholder {
+    color: #969696;
+}
+
+
+.camera-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 15px;
+}
+
+
+.camera-button:active {
+    transform: scale(.94);
+}
+
+
+/* =========================================================
+   TOP CATEGORY
+========================================================= */
+
+.top-category-nav {
+    width: 100%;
+
+    background: #fff7fb;
+}
+
+
+.top-category-scroll {
+    display: flex;
+
+    gap: 28px;
+
+    width: 100%;
+
+    padding: 0 16px 10px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+}
+
+
+.top-category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.top-category {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    padding: 4px 0;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.top-category.active {
+    color: var(--pink);
+}
+
+
+.top-category.active::after {
+    position: absolute;
+
+    left: 50%;
+    bottom: -10px;
+
+    width: 25px;
+    height: 3px;
+
+    content: "";
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+    background: var(--pink);
+}
+
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.promo-section {
+    width: 100%;
+
+    padding: 12px 12px 0;
+}
+
+
+.promo-slider {
+    position: relative;
+
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #eee;
+
+    touch-action: pan-y;
+
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, .06);
+}
+
+
+.promo-slide {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    cursor: pointer;
+
+    transition: opacity .55s ease;
+}
+
+
+.promo-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.promo-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.banner-dots {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    height: 15px;
+}
+
+
+.banner-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #d7d7d7;
+
+    transition: .25s ease;
+}
+
+
+.banner-dot.active {
+    width: 15px;
+
+    border-radius: 10px;
+
+    background: var(--pink);
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.content-section {
+    width: 100%;
+
+    padding: 13px 12px 0;
+}
+
+
+.section-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 11px;
+}
+
+
+.section-header h2 {
+    color: #222;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EXPLORE CATEGORIES
+========================================================= */
+
+.explore-category-scroll {
+    display: flex;
+
+    gap: 13px;
+
+    width: 100%;
+
+    padding-bottom: 5px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+}
+
+
+.explore-category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.explore-category {
+    display: flex;
+
+    flex: 0 0 calc((100% - 52px) / 5);
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    background: transparent;
+
+    color: #383838;
+
+    font-size: 8.5px;
+
+    font-weight: 600;
+}
+
+
+.explore-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 16px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 18px;
+
+    transition: .2s ease;
+}
+
+
+.explore-category:active .explore-icon {
+    background: var(--pink);
+
+    color: #fff;
+
+    transform: scale(.94);
+}
+
+
+/* =========================================================
+   FLASH SELL
+   NO BACKGROUND
+========================================================= */
+
+.flash-sale-section {
+    width: 100%;
+
+    margin: 16px 0 0;
+
+    padding: 0 12px 4px;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   FLASH HEADER
+========================================================= */
+
+.flash-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    min-height: 34px;
+
+    gap: 7px;
+
+    margin-bottom: 9px;
+}
+
+
+.flash-title {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.flash-title h2 {
+    color: #111;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.flash-header-right {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+.flash-countdown {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    flex-shrink: 0;
+}
+
+
+.flash-countdown > b {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--pink);
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    height: 27px;
+}
+
+
+.flash-time-box {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1px;
+
+    min-width: 28px;
+    height: 27px;
+
+    padding: 0 4px;
+
+    border-radius: 7px;
+
+    background: var(--pink);
+
+    color: #fff;
+}
+
+
+.flash-time-box span {
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.flash-time-box small {
+    font-size: 5px;
+
+    line-height: 1;
+
+    opacity: .85;
+}
+
+
+/* =========================================================
+   SEE ALL
+========================================================= */
+
+.flash-see-all {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--pink);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.flash-see-all i {
+    font-size: 8px;
+}
+
+
+.flash-see-all:active {
+    transform: scale(.95);
+}
+
+
+/* =========================================================
+   FLASH PRODUCT SCROLL
+========================================================= */
+
+.flash-product-scroll {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 0 1px 3px;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.flash-product-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.flash-product-scroll > * {
+    scroll-snap-align: start;
+}
+
+
+/* =========================================================
+   FLASH CARD
+========================================================= */
+
+.flash-product-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 0 0 calc((100% - 16px) / 3);
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    box-shadow:
+        0 2px 7px rgba(0,0,0,.05);
+}
+
+
+/* =========================================================
+   FLASH IMAGE
+========================================================= */
+
+.flash-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: 96px;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+
+    flex-shrink: 0;
+}
+
+
+.flash-product-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   FLASH DISCOUNT
+========================================================= */
+
+.flash-discount {
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+
+    z-index: 2;
+
+    padding: 3px 5px;
+
+    border-radius: 5px;
+
+    background: var(--pink);
+
+    color: #fff;
+
+    font-size: 7px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FLASH WISHLIST
+========================================================= */
+
+.flash-wishlist {
+    position: absolute;
+
+    top: 4px;
+    right: 4px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.95);
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+
+.flash-wishlist.active {
+    color: var(--pink);
+}
+
+
+/* =========================================================
+   FLASH INFO
+========================================================= */
+
+.flash-product-info {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 6px;
+}
+
+
+.flash-product-name {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    min-height: 27px;
+    max-height: 27px;
+
+    color: #222;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+}
+
+
+.flash-product-seller {
+    min-height: 12px;
+
+    margin-top: 2px;
+}
+
+
+.flash-verified {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    padding: 2px 3px;
+
+    border-radius: 4px;
+
+    background: #edf7ff;
+
+    color: var(--blue);
+
+    font-size: 6px;
+
+    font-weight: 700;
+}
+
+
+.flash-product-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    height: 13px;
+
+    margin-top: 2px;
+
+    color: #777;
+
+    font-size: 7.5px;
+}
+
+
+.flash-product-rating b {
+    color: #444;
+}
+
+
+.flash-product-rating small {
+    color: #999;
+}
+
+
+/* =========================================================
+   FLASH PRICE
+========================================================= */
+
+.flash-price-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 3px;
+
+    margin-top: 3px;
+}
+
+
+.flash-price {
+    color: var(--pink);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.flash-old-price {
+    color: #888;
+
+    font-size: 7px;
+
+    text-decoration: line-through;
+}
+
+
+.flash-discount-small {
+    padding: 2px 3px;
+
+    border-radius: 6px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 5.5px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FLASH EXTRA INFO
+========================================================= */
+
+.flash-extra-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    min-height: 17px;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   FLASH STOCK
+========================================================= */
+
+.flash-stock {
+    margin-top: 4px;
+}
+
+
+.flash-stock-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 3px;
+
+    color: #777;
+
+    font-size: 6px;
+}
+
+
+.flash-stock-track {
+    width: 100%;
+
+    height: 3px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #eee;
+}
+
+
+.flash-stock-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--pink);
+}
+
+
+.flash-empty {
+    width: 100%;
+
+    padding: 20px 5px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.benefits-row {
+    display: flex;
+
+    width: 100%;
+
+    gap: 8px;
+
+    padding: 12px 12px 4px;
+
+    border-bottom: 1px solid #f1d9e5;
+}
+
+
+.benefit-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.benefit-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 10px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 12px;
+}
+
+
+.benefit-item > span:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.benefit-item b {
+    overflow: hidden;
+
+    color: #333;
+
+    font-size: 7px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.benefit-item small {
+    overflow: hidden;
+
+    margin-top: 1px;
+
+    color: #999;
+
+    font-size: 5.5px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   RECOMMENDED
+========================================================= */
+
+.all-products-section {
+    background: #fff;
+
+    padding-top: 16px;
+}
+
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.product-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #eee;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    box-shadow:
+        0 2px 9px rgba(0,0,0,.05);
+}
+
+
+.product-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.product-wishlist {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.94);
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+.product-wishlist.active {
+    color: var(--pink);
+}
+
+
+.product-info {
+    padding: 7px 7px 8px;
+}
+
+
+.product-name {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    min-height: 29px;
+    max-height: 29px;
+
+    color: #222;
+
+    font-size: 10.5px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+}
+
+
+.product-seller {
+    min-height: 16px;
+
+    margin-top: 3px;
+}
+
+
+.verified-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    padding: 2px 4px;
+
+    border-radius: 4px;
+
+    background: #edf7ff;
+
+    color: var(--blue);
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.product-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    height: 14px;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 9px;
+}
+
+
+.product-rating b {
+    color: #444;
+}
+
+
+.product-rating small {
+    color: #999;
+}
+
+
+.product-price-row {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 4px;
+}
+
+
+.product-price-row strong {
+    color: var(--pink);
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.product-price-row del {
+    color: #777;
+
+    font-size: 8px;
+}
+
+
+.discount-badge {
+    padding: 2px 4px;
+
+    border-radius: 8px;
+
+    background: var(--pink-light);
+
+    color: var(--pink);
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.product-extra-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin-top: 4px;
+
+    color: #777;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   LOAD MORE
+========================================================= */
+
+.load-more-button {
+    display: block;
+
+    margin: 20px auto 0;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--pink);
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    color: var(--pink);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.load-more-button:active {
+    background: var(--pink);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   BOTTOM NAV
+========================================================= */
+
+.bottom-navigation {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    height: 64px;
+
+    border-top: 1px solid #eee;
+
+    background: rgba(255,255,255,.98);
+
+    box-shadow:
+        0 -4px 16px rgba(0,0,0,.06);
+}
+
+
+.bottom-nav-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 58px;
+
+    color: #555;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.bottom-nav-item i {
+    font-size: 18px;
+}
+
+
+.bottom-nav-item.active {
+    color: var(--pink);
+}
+
+
+.bottom-cart-icon {
+    position: relative;
+}
+
+
+.cart-badge {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 16px;
+    height: 16px;
+
+    padding: 0 4px;
+
+    border-radius: 20px;
+
+    background: var(--pink);
+
+    color: #fff;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+
+    body {
+        background: #f1f2f4;
+    }
+
+
+    .bazvor-app {
+        max-width: 1280px;
+
+        margin: 0 auto;
+    }
+
+
+    .header-top {
+        height: 68px;
+
+        padding: 0 22px;
+    }
+
+
+    /* LOGO DESKTOP */
+
+    .brand-logo {
+        width: 46px;
+        height: 46px;
+
+        flex: 0 0 46px;
+    }
+
+
+    .brand-logo img,
+    .logo img {
+        width: 46px;
+        height: 46px;
+
+        object-fit: contain;
+    }
+
+
+    .brand-name {
+        font-size: 27px;
+    }
+
+
+    .header-search-wrap {
+        padding: 3px 22px 10px;
+    }
+
+
+    .search-box {
+        max-width: 900px;
+
+        margin: 0 auto;
+    }
+
+
+    .top-category-scroll {
+        justify-content: center;
+
+        gap: 34px;
+
+        padding-bottom: 12px;
+    }
+
+
+    .promo-section {
+        padding: 20px 22px 0;
+    }
+
+
+    .promo-slider {
+        height: 360px;
+
+        border-radius: 18px;
+    }
+
+
+    .content-section {
+        padding-right: 22px;
+
+        padding-left: 22px;
+    }
+
+
+    .explore-category {
+        flex-basis: 100px;
+    }
+
+
+    .flash-sale-section {
+        width: 100%;
+
+        margin: 18px 0 0;
+
+        padding-right: 22px;
+
+        padding-left: 22px;
+
+        background: transparent;
+
+        border: 0;
+
+        box-shadow: none;
+    }
+
+
+    .flash-product-card {
+        flex-basis: 190px;
+    }
+
+
+    .flash-image-wrap {
+        height: 130px;
+    }
+
+
+    .benefits-row {
+        padding-right: 22px;
+
+        padding-left: 22px;
+    }
+
+
+    .product-grid {
+        grid-template-columns:
+            repeat(4, minmax(0,1fr));
+
+        gap: 16px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .promo-slider {
+        height: 420px;
+    }
+
+
+    .flash-product-card {
+        flex-basis: 200px;
+    }
+
+
+    .flash-image-wrap {
+        height: 135px;
+    }
+
+
+    .product-grid {
+        grid-template-columns:
+            repeat(5, minmax(0,1fr));
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .brand-name {
+        font-size: 21px;
+    }
+
+
+    /* SMALL PHONE LOGO */
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+
+        flex: 0 0 38px;
+    }
+
+
+    .brand-logo img,
+    .logo img {
+        width: 38px;
+        height: 38px;
+
+        object-fit: contain;
+    }
+
+
+    .header-actions {
+        gap: 4px;
+    }
+
+
+    .header-icon-button {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .promo-slider {
+        height: 175px;
+    }
+
+
+    .flash-sale-section {
+        margin-top: 14px;
+
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+    .flash-title h2 {
+        font-size: 16px;
+    }
+
+
+    .flash-header-right {
+        gap: 5px;
+    }
+
+
+    .flash-see-all {
+        font-size: 9px;
+    }
+
+
+    .flash-time-box {
+        min-width: 25px;
+
+        height: 25px;
+    }
+
+
+    .flash-countdown > b {
+        height: 25px;
+    }
+
+
+    .flash-image-wrap {
+        height: 88px;
+    }
+
+
+    .flash-product-info {
+        padding: 5px;
+    }
+
+
+    .flash-product-name {
+        font-size: 8.5px;
+
+        min-height: 25px;
+        max-height: 25px;
+    }
+
+
+    .flash-price {
+        font-size: 10px;
+    }
+
+
+    .benefits-row {
+        gap: 4px;
+    }
+
+
+    .benefit-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .benefit-item b {
+        font-size: 6.5px;
+    }
+}
